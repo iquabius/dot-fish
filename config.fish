@@ -3,6 +3,9 @@ status --is-login; and status --is-interactive; and exec byobu-launcher
 set PATH "$HOME/.dropbox-bin" $PATH
 set PATH "$HOME/bin" "$HOME/.local/bin" $PATH
 
+set GOPATH "$HOME/go"
+set PATH "/usr/local/go/bin" "$GOPATH/bin" $PATH
+
 set -g theme_display_virtualenv no
 
 # https://www.calazan.com/docker-cleanup-commands/
