@@ -1,15 +1,26 @@
 status --is-login; and status --is-interactive; and exec byobu-launcher
 
-set PATH "$HOME/.dropbox-bin" $PATH
-set PATH "$HOME/bin" "$HOME/.local/bin" $PATH
+# set PATH "$HOME/.dropbox-bin" $PATH
+
+if test -d "$HOME/bin"
+  set PATH "$HOME/bin" $PATH
+end
+
+if test -d "$HOME/.local/bin"
+  set PATH "$HOME/.local/bin" $PATH
+end
 
 set GOPATH "$HOME/go"
-set PATH "/usr/local/go/bin" "$GOPATH/bin" $PATH
+if test -d "$GOPATH/bin"
+  set PATH "/usr/local/go/bin" "$GOPATH/bin" $PATH
+end
 
 # TeX Live installation
-set MANPATH "/usr/local/texlive/2017/texmf-dist/doc/man"
-set INFOPATH "/usr/local/texlive/2017/texmf-dist/doc/info"
-set PATH "/usr/local/texlive/2017/bin/x86_64-linux" $PATH
+if test -d "/usr/local/texlive/2017"
+  set MANPATH "/usr/local/texlive/2017/texmf-dist/doc/man"
+  set INFOPATH "/usr/local/texlive/2017/texmf-dist/doc/info"
+  set PATH "/usr/local/texlive/2017/bin/x86_64-linux" $PATH
+end
 
 set -g theme_display_virtualenv no
 
