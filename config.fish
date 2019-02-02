@@ -41,3 +41,8 @@ alias dockercleanv='docker volume ls -qf dangling=true | xargs -r docker volume 
 alias dockerclean='dockercleanc; and dockercleani; or or echo "Docker cleaning failed"'
 
 alias docker-container-ip 'docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}"'
+
+# http://www.codecoffee.com/tipsforlinux/articles/22.html
+function dirsize
+    du -ch $argv | grep total
+end
