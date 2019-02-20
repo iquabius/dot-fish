@@ -16,10 +16,10 @@ if test -d "$GOPATH/bin"
 end
 
 # TeX Live installation
-if test -d "/usr/local/texlive/2017"
-  set MANPATH "/usr/local/texlive/2017/texmf-dist/doc/man"
-  set INFOPATH "/usr/local/texlive/2017/texmf-dist/doc/info"
-  set PATH "/usr/local/texlive/2017/bin/x86_64-linux" $PATH
+if test -d "/usr/local/texlive/2018"
+  set MANPATH "/usr/local/texlive/2018/texmf-dist/doc/man"
+  set INFOPATH "/usr/local/texlive/2018/texmf-dist/doc/info"
+  set PATH "/usr/local/texlive/2018/bin/x86_64-linux" $PATH
 end
 
 set -g theme_display_virtualenv no
