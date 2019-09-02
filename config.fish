@@ -42,6 +42,9 @@ alias dockerclean='dockercleanc; and dockercleani; or or echo "Docker cleaning f
 
 alias docker-container-ip 'docker inspect -f "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}"'
 
+# https://ditchwindows.com/elementary-os-community-tips-and-tricks/
+alias current-network-adapter 'lspci -nnk | grep 0280 -A3'
+
 # http://www.codecoffee.com/tipsforlinux/articles/22.html
 function dirsize
     du -ch $argv | grep total
