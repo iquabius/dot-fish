@@ -58,6 +58,15 @@ abbr -a gprune git prune-branches
 abbr -a gs git status
 abbr -a gsl git status --long
 
+# wifi-list-available
+abbr -a wla nmcli d wifi list
+# wifi-list-configured
+abbr -a wlc nmcli c
+# wifi-connect
+abbr -a wc nmcli c up
+# wifi-disconnect
+abbr -a wd nmcli c down
+
 # http://www.codecoffee.com/tipsforlinux/articles/22.html
 function dirsize
     du -ch $argv | grep total
