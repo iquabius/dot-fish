@@ -45,6 +45,19 @@ alias docker-container-ip 'docker inspect -f "{{range .NetworkSettings.Networks}
 # https://ditchwindows.com/elementary-os-community-tips-and-tricks/
 alias current-network-adapter 'lspci -nnk | grep 0280 -A3'
 
+abbr -a gaa git add -A
+abbr -a gan git add .
+abbr -a gau git add -u
+abbr -a gcb git checkout -b
+abbr -a gco git checkout
+abbr -a gcr git checkout --track origin/
+abbr -a gl git log --oneline
+abbr -a gll git log
+abbr -a gpb git push -u origin HEAD
+abbr -a gprune git prune-branches
+abbr -a gs git status
+abbr -a gsl git status --long
+
 # http://www.codecoffee.com/tipsforlinux/articles/22.html
 function dirsize
     du -ch $argv | grep total
