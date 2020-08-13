@@ -27,6 +27,11 @@ if test -d "/usr/local/texlive/2018"
   set PATH "/usr/local/texlive/2018/bin/x86_64-linux" $PATH
 end
 
+set ANDROID_SDK "$HOME/Android/Sdk"
+if test -d "$ANDROID_SDK"
+  set PATH "$ANDROID_SDK/platform-tools" $PATH
+end
+
 set -g theme_display_virtualenv no
 
 # https://www.calazan.com/docker-cleanup-commands/
