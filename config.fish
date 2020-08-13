@@ -64,6 +64,7 @@ abbr -a gcr git checkout --track origin/
 abbr -a gl git log --oneline
 abbr -a gll git log
 abbr -a gpb git push -u origin HEAD
+abbr -a gp git pull --ff-only
 abbr -a gprune git prune-branches
 abbr -a gs git status
 abbr -a gsl git status --long
