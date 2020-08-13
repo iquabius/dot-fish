@@ -10,6 +10,11 @@ if test -d "$HOME/.local/bin"
   set PATH "$HOME/.local/bin" $PATH
 end
 
+# https://github.com/axetroy/dvm
+if test -d "$HOME/.deno/bin"
+  set PATH "$HOME/.deno/bin" $PATH
+end
+
 set GOPATH "$HOME/go"
 if test -d "$GOPATH/bin"
   set PATH "/usr/local/go/bin" "$GOPATH/bin" $PATH
