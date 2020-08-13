@@ -82,3 +82,16 @@ abbr -a wd nmcli c down
 function dirsize
     du -ch $argv | grep total
 end
+
+# Lists every web page in which I've taken notes with Org-roam.
+function org-roam-keys
+  # Adapted from https://unix.stackexchange.com/a/181264/120023
+  # -r: --recursive
+  # -h: --no-file-name
+  # -E: --extended-regexp
+  grep -rhE '#\+roam_key: (.*)$' ~/Org.d/Roam |\
+  # -o: --only-matching
+  grep -Eo '(http|https)(.*)$'
+end
+# TODO: Handle org-ref citation keys
+# See https://www.orgroam.com/manual/File-Refs.html
