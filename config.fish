@@ -99,3 +99,21 @@ end
 # Generated for envman. Do not edit.
 test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
 
+#https://stackoverflow.com/questions/46461765/how-to-test-for-argv-count-and-value-of-argv1-in-fish-shell
+#https://stackoverflow.com/questions/42950501/delete-node-modules-folder-recursively-from-a-specified-path-using-command-line
+#https://fishshell.com/docs/current/cmds/argparse.html
+function rmnode_modules
+  if test (count $argv) -lt 1; or test $argv[1] = "--help"
+    echo "Usage: remove-node_modules [OPTIONS]... [DIRECTORY]"
+    echo "Remove 'node_modules' recursively for given directory." \n
+    echo "Options:"
+    echo "  --dry-run       List 'node_modules' directories without actually deleting them."
+    echo "  --help          Show this help message."
+  else if test $argv[1] = "--dry-run"
+    echo "These are the node_module directories that will be removed if running without --dry-run option:"
+    find $argv[2] -name 'node_modules' -type d -prune
+  else
+    echo "Removing 'node_modules' in $argv[1]"
+    find $argv[1] -name 'node_modules' -type d -prune -printf ' Removed %p' -exec rm -rf '{}' +
+  end
+end
