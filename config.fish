@@ -12,6 +12,9 @@ end
 
 eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
+# https://github.com/ajeetdsouza/zoxide#fish
+zoxide init fish | source
+
 # https://github.com/starship/starship
 # brew install starship
 starship init fish | source
