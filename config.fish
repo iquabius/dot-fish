@@ -10,6 +10,10 @@ if test -d "$HOME/.local/bin"
   set PATH "$HOME/.local/bin" $PATH
 end
 
+# https://github.com/starship/starship
+# brew install starship
+starship init fish | source
+
 # https://github.com/axetroy/dvm
 if test -d "$HOME/.deno/bin"
   set PATH "$HOME/.deno/bin" $PATH
