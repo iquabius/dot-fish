@@ -115,6 +115,8 @@ end
 # TODO: Handle org-ref citation keys
 # See https://www.orgroam.com/manual/File-Refs.html
 
+set REACT_EDITOR "code --add"
+
 # Generated for envman. Do not edit.
 test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
 
