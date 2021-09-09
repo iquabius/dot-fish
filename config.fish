@@ -36,6 +36,8 @@ if test -d "/usr/local/texlive/2018"
   set PATH "/usr/local/texlive/2018/bin/x86_64-linux" $PATH
 end
 
+set JAVA_HOME "/usr/lib/jvm/java-8-openjdk-amd64/"
+
 # values are already in the PATH because they are set in ~/.bashrc
 set ANDROID_HOME "$HOME/Android/Sdk"
 set ANDROID_SDK_ROOT $ANDROID_HOME
