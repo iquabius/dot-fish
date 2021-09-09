@@ -10,6 +10,8 @@ if test -d "$HOME/.local/bin"
   set PATH "$HOME/.local/bin" $PATH
 end
 
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
 # https://github.com/starship/starship
 # brew install starship
 starship init fish | source
