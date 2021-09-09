@@ -67,6 +67,11 @@ alias docker-container-ip 'docker inspect -f "{{range .NetworkSettings.Networks}
 # https://ditchwindows.com/elementary-os-community-tips-and-tricks/
 alias current-network-adapter 'lspci -nnk | grep 0280 -A3'
 
+# https://ostechnix.com/how-to-use-pbcopy-and-pbpaste-commands-on-linux/
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+# Speed up Git workflow with keybindings: https://github.com/joseluisq/gitnow
 abbr -a gaa git add -A
 abbr -a gan git add .
 abbr -a gau git add -u
